@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Roboto','sans-serif';
+}
+a{
+  text-decoration: none;
+
+  &:hover{
+    color: #666;
+  }
+}
+ul{
+  list-style: none;
+}
+.btn{
+  cursor: pointer;
+
+  &:disabled{
+    background:#ccc;
+    color: #000;
+    cursor: not-allowed;
+  }
+
+  &:hover{
+    opacity: 0.8;
+  }
+}
+.active{
+  font-weight: bold;
+  color: red;
+  cursor: default;
+}

@@ -1,0 +1,16 @@
+<nav class="nav-container">
+  <ul class="nav-list">
+
+    <li class="nav-list__item "  >
+      <a [routerLinkActiveOptions]="{exact:true}" routerLinkActive="nav-list__active" [routerLink]="['/']" >Приветствие</a>
+    </li>
+    <li class="nav-list__item " >
+      <a routerLinkActive="nav-list__active" [routerLink]="['/content']">Контент</a>
+    </li>
+    <li class="nav-list__item ">
+      <a routerLinkActive="nav-list__active" [routerLink]="['/feedback']">Обратная связь</a>
+    </li>
+
+  </ul>
+  <p class="nav-projectVersion">версия {{version}}</p>
+</nav>

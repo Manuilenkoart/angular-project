@@ -1,0 +1,18 @@
+  <h1>Курс валют по состоянию на {{date | date : 'dd.MM.YYYY HH:mm'  }}</h1>
+  <table class="responstable">
+
+    <tr>
+      <th data-th="Driver details"><span>Валюта</span></th>
+      <th>Продажа</th>
+      <th>Покупка</th>
+    </tr>
+
+    <tr *ngFor="let elCurrency of getCurrencyFromApi">
+      <td >{{elCurrency.ccy}}</td>
+      <td>{{elCurrency.sale}}</td>
+      <td>{{elCurrency.buy}}</td>
+    </tr>
+
+  </table>
+
+
