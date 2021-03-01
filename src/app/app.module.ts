@@ -10,6 +10,12 @@ import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {WorkExampleComponent} from './work-example/work-example.component';
+import {MaterialModule} from './material/material.module';
+import { AboutYourselfComponent } from './about-yourself/about-yourself.component';
+import { InterestComponent } from './interest/interest.component';
+
 
 @NgModule({
   declarations: [
@@ -17,14 +23,20 @@ import {HttpClientModule} from '@angular/common/http';
     HeaderComponent,
     HelloComponent,
     ContentComponent,
-    FormComponent
+    FormComponent,
+    WorkExampleComponent,
+    AboutYourselfComponent,
+    InterestComponent
   ],
+  entryComponents: [WorkExampleComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
