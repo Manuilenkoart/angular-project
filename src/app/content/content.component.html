@@ -1,18 +1,26 @@
-  <h1>Курс валют по состоянию на {{date | date : 'dd.MM.YYYY HH:mm'  }}</h1>
-  <table class="responstable">
+  <h1 >Курс валют по состоянию на {{date | date : 'dd.MM.YYYY HH:mm'  }}</h1>
 
-    <tr>
-      <th data-th="Driver details"><span>Валюта</span></th>
-      <th>Продажа</th>
-      <th>Покупка</th>
-    </tr>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <tr *ngFor="let elCurrency of getCurrencyFromApi">
-      <td >{{elCurrency.ccy}}</td>
-      <td>{{elCurrency.sale}}</td>
-      <td>{{elCurrency.buy}}</td>
-    </tr>
+    <!-- Position Column -->
+    <ng-container matColumnDef="ccy">
+      <th mat-header-cell *matHeaderCellDef> Валюта </th>
+      <td mat-cell *matCellDef="let element "> {{element.ccy}} </td>
+    </ng-container>
 
+    <!-- Name Column -->
+    <ng-container matColumnDef="buy">
+      <th mat-header-cell *matHeaderCellDef> Покупка </th>
+      <td mat-cell *matCellDef="let element"> {{element.buy}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="sale">
+      <th mat-header-cell *matHeaderCellDef> Продажа </th>
+      <td mat-cell *matCellDef="let element"> {{element.sale}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
-
