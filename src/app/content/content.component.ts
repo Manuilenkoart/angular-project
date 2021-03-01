@@ -17,7 +17,6 @@ export class ContentComponent implements OnInit {
   date: Date = new Date();
   ngOnInit(): void {
     this.http.get<CurrencyInterface[]>('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5').subscribe(res => {
-      console.log(res);
       this.getCurrencyFromApi = res;
     });
   }
