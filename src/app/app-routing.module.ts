@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HelloComponent} from '../../../angular/src/app/hello/hello.component';
+import {HelloComponent} from './hello/hello.component';
 import {ContentComponent} from './content/content.component';
-import {FormComponent} from '../../../angular/src/app/form/form.component';
+import {FormComponent} from './form/form.component';
 
 const routes: Routes = [
   {path: '', component: HelloComponent},
