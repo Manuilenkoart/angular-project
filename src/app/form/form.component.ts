@@ -6,11 +6,7 @@ import {FormControl, Validators} from '@angular/forms';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-// export class FormComponent   {
-//
-//
-//
-// }
+
 
 export class FormComponent {
   emailFormControl = new FormControl('', [

@@ -7,7 +7,7 @@ import {InterestComponent} from '../interest/interest.component';
 @Component({
   selector: 'app-hello',
   templateUrl: './hello.component.html',
-  // styleUrls: ['./hello.component.scss']
+  styleUrls: ['./hello.component.scss'],
 })
 
 
@@ -21,7 +21,7 @@ export class HelloComponent   {
     this.dialog.open(AboutYourselfComponent);
   }
 openDialogInterest(): void {
-    this.dialog.open(InterestComponent)
+    this.dialog.open(InterestComponent);
 }
 }
 
