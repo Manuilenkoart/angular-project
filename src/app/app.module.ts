@@ -7,7 +7,7 @@ import { HelloComponent } from './hello/hello.component';
 import { ContentComponent } from './content/content.component';
 import { FormComponent } from './form/form.component';
 import {RouterModule} from '@angular/router';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,7 +36,8 @@ import { InterestComponent } from './interest/interest.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-MaterialModule
+MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

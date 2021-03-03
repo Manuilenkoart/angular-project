@@ -1,34 +1,20 @@
 <h1 class="form-title">Форма обратной связи</h1>
-<!--<form>-->
-<!--  <div class="form-control">-->
-<!--    <label>Email-->
-<!--      <input type="text" placeholder="Введите email">-->
-<!--    </label>-->
-<!--  </div>-->
-<!--  <div class="form-control">-->
-<!--    <label>-->
-<!--<textarea-->
-<!--  placeholder="Введите текст..."-->
-<!--&gt;</textarea>-->
-<!--    </label>-->
-<!--  </div>-->
-<!--  <button type="submit">Отправить</button>-->
-<!--</form>-->
-<form class="form">
+
+<form class="form" [formGroup]="form" (ngSubmit)="submit()">
   <mat-form-field class="example-full-width">
     <mat-label>Email</mat-label>
-    <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+    <input type="email" matInput [formControl]="emailFormControl" placeholder="Например pat@example.com">
     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-      Please enter a valid email address
+      пожалуйста введите корректный email
     </mat-error>
     <mat-error *ngIf="emailFormControl.hasError('required')">
-      Email is <strong>required</strong>
+      поле Email <strong>обязательное</strong>
     </mat-error>
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    <textarea formControlName="textAreaComment" matInput placeholder="Ex. It makes me feel..."></textarea>
   </mat-form-field>
-    <button type="submit" mat-raised-button class="form-btn">Отправить</button>
+    <button [disabled]="form.invalid" type="submit" mat-raised-button class="form-btn">Отправить</button>
 
 </form>
