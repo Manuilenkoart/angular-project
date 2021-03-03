@@ -1,4 +1,3 @@
-import {ContentComponent} from './content.component';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';

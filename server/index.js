@@ -1,10 +1,16 @@
+require('dotenv').config();
+
 const express = require("express");
 const path = require("path");
+const bodyParser = require('body-parser');
+const apiRoutes = require('./routes/apiroutes/apiRoutes')
 const app = express();
-
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use("/", apiRoutes)
 app.use(express.static(path.join(__dirname, "../dist/angular-project")));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, function () {
   console.log(`Example app listening on port ${PORT}!`);

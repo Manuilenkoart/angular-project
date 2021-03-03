@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormService} from './form.service';
 
 @Component({
   selector: 'app-form',
@@ -15,6 +16,9 @@ export class FormComponent implements OnInit{
     Validators.email,
   ]);
 
+  constructor(private formService: FormService) {
+  }
+
   ngOnInit(): void {
     this.form = new FormGroup({
       email: this.emailFormControl,
@@ -25,7 +29,8 @@ export class FormComponent implements OnInit{
   submit(): void {
     if (this.form.valid){
       const formData = {... this.form.value};
-      console.log(formData);
+      console.log('formData', formData);
+      this.formService.postData(formData);
       this.form.reset();
 
     }
