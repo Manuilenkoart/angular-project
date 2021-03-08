@@ -17,16 +17,16 @@ export class ContentComponent implements OnInit {
   constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-  this.getCurrencyFromApi();
+    this.getCurrencyFromApi();
   }
 
   getCurrencyFromApi() {
     this.loading = true;
     this.contentService.getData().subscribe(res => {
-    this.dataSource = res;
-    this.loading = false;
-  });
-}
+      this.dataSource = res;
+      this.loading = false;
+    });
+  }
 }
 
 

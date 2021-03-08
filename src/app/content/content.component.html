@@ -1,4 +1,4 @@
-  <h1 >Курс валют по состоянию на {{date | date : 'dd.MM.YYYY HH:mm'  }}</h1>
+<h1 >Курс валют по состоянию на {{date | date : 'dd.MM.YYYY HH:mm'  }}</h1>
 <div *ngIf="!loading; else loadingBlock">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -25,9 +25,9 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>
-  <ng-template #loadingBlock>
+<ng-template #loadingBlock>
 
-      <mat-spinner></mat-spinner>
+  <mat-spinner></mat-spinner>
 
 
-  </ng-template>
+</ng-template>

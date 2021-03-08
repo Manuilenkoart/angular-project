@@ -1,6 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
+import {ContentModule} from './content.module';
 
 
 export interface CurrencyInterface{
