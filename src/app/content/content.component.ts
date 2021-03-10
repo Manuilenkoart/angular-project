@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import {ContentService, CurrencyInterface} from './content.service';
+import {ContentService} from './content.service';
+import {CurrencyInterface} from './content.model';
 
 @Component({
   selector: 'app-content',

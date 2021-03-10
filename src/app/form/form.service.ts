@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {FormInterface} from './form.model';
 
 
-export interface FormInterface{
-  email: string;
-  textAreaComment: string;
-}
+
 @Injectable({
   providedIn: 'root'
 })
