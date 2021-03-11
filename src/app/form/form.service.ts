@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {FormInterface} from './form.model';
-import {catchError} from 'rxjs/operators';
+import {catchError, map} from 'rxjs/operators';
 import {error} from '@angular/compiler/src/util';
 
 
@@ -19,5 +19,6 @@ export class FormService {
      }, error => {
        console.log('error', error);
      });
+
   }
 }

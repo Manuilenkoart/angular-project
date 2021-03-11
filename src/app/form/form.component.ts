@@ -4,6 +4,7 @@ import {FormService} from './form.service';
 import {MatDialog} from '@angular/material/dialog';
 import {FormSubmitComponent} from './form-submit/form-submit.component';
 import {FormInterface} from './form.model';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -23,6 +24,7 @@ export class FormComponent implements OnInit{
 
 constructor(public dialog: MatDialog,
             private formService: FormService,
+            private router: Router
            ) {
   }
 
@@ -38,10 +40,9 @@ constructor(public dialog: MatDialog,
       const formData = {... this.form.value};
       console.log('formData', formData);
       this.formService.postData(formData);
-
       this.openDialog(formData);
       this.formReset();
-
+      this.redirectAfterSubmitedForm();
     }
   }
   openDialog(formData) {
@@ -55,5 +56,8 @@ constructor(public dialog: MatDialog,
     this.form.get('email').clearValidators();
     this.form.get('email').updateValueAndValidity();
 
+  }
+  redirectAfterSubmitedForm(): void {
+    this.router.navigate(['/']);
   }
 }
