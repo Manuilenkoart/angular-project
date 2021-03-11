@@ -6,11 +6,10 @@ import {MatCardModule} from '@angular/material/card';
 import {FormRoutingModule} from './form-routing.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
-
-
+import {FormSubmitComponent} from './form-submit/form-submit.component';
 
 @NgModule({
-  declarations: [FormComponent],
+  declarations: [FormComponent, FormSubmitComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

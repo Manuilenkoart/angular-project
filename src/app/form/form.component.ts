@@ -1,11 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {FormService} from './form.service';
+import {MatDialog} from '@angular/material/dialog';
+import {FormSubmitComponent} from './form-submit/form-submit.component';
+import {FormInterface} from './form.model';
+
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  styleUrls: ['./form.component.scss'],
 })
 
 
@@ -16,7 +20,10 @@ export class FormComponent implements OnInit{
     Validators.email,
   ]);
 
-  constructor(private formService: FormService) {
+
+constructor(public dialog: MatDialog,
+            private formService: FormService,
+           ) {
   }
 
   ngOnInit(): void {
@@ -31,9 +38,22 @@ export class FormComponent implements OnInit{
       const formData = {... this.form.value};
       console.log('formData', formData);
       this.formService.postData(formData);
-      this.form.reset();
+
+      this.openDialog(formData);
+      this.formReset();
 
     }
   }
+  openDialog(formData) {
+    this.dialog.open(FormSubmitComponent, {
+      data: {...formData}
+    });
+  }
 
+  formReset(): void {
+    this.form.reset();
+    this.form.get('email').clearValidators();
+    this.form.get('email').updateValueAndValidity();
+
+  }
 }
