@@ -7,6 +7,7 @@ import {FormRoutingModule} from './form-routing.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {FormSubmitComponent} from './form-submit/form-submit.component';
+import {FormService} from './form.service';
 
 @NgModule({
   declarations: [FormComponent, FormSubmitComponent],
@@ -18,7 +19,8 @@ import {FormSubmitComponent} from './form-submit/form-submit.component';
     MatButtonModule,
     FormRoutingModule,
 
-  ]
+  ],
+  providers: [FormService]
 })
 
 export class FormModule { }

@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {FormInterface} from './form.model';
-import {catchError, map} from 'rxjs/operators';
-import {error} from '@angular/compiler/src/util';
-
 
 
 @Injectable({
@@ -13,12 +10,8 @@ export class FormService {
 
   constructor(private http: HttpClient) { }
 
-  postData(sendData: FormInterface): any {
-     this.http.post<FormInterface>('/sendmessage', sendData).subscribe(res => {
-       console.log('res', res);
-     }, error => {
-       console.log('error', error);
-     });
-
+  postData(sendData: FormInterface) {
+    return this.http.post('/sendmessage', sendData);
   }
+
 }

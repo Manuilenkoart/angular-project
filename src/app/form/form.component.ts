@@ -1,9 +1,8 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {FormService} from './form.service';
 import {MatDialog} from '@angular/material/dialog';
 import {FormSubmitComponent} from './form-submit/form-submit.component';
-import {FormInterface} from './form.model';
 import {Router} from '@angular/router';
 
 
@@ -21,11 +20,11 @@ export class FormComponent implements OnInit{
     Validators.email,
   ]);
 
+  isFormPosted: boolean;
 
 constructor(public dialog: MatDialog,
             private formService: FormService,
-            private router: Router
-           ) {
+            private router: Router) {
   }
 
   ngOnInit(): void {
@@ -38,16 +37,21 @@ constructor(public dialog: MatDialog,
   submit(): void {
     if (this.form.valid){
       const formData = {... this.form.value};
-      console.log('formData', formData);
-      this.formService.postData(formData);
-      this.openDialog(formData);
-      this.formReset();
-      this.redirectAfterSubmitedForm();
+      this.formService.postData(formData).subscribe(res => {
+        this.isFormPosted = true;
+        this.openDialog(formData, this.isFormPosted);
+        this.formReset();
+        this.redirectAfterSubmitedForm();
+      }, error => {
+        this.isFormPosted = false;
+        this.openDialog(formData, this.isFormPosted);
+      });
+
     }
   }
-  openDialog(formData) {
+  openDialog(formData, formPostStatus): void {
     this.dialog.open(FormSubmitComponent, {
-      data: {...formData}
+      data: {...formData, formPostStatus}
     });
   }
 

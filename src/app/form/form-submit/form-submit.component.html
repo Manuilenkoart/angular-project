@@ -1,2 +1,30 @@
-<div mat-dialog-title ><p>email: {{data.email}}</p></div>
-<div mat-dialog-content><h3>Комментарий: </h3><p>{{data.textAreaComment}}</p></div>
+<div class="popup-formSubmit">
+  <div  *ngIf="formPostData.formPostStatus else loadingBlock">
+    <p class="popup-formSubmit__success">
+      Форма отправлена
+    </p>
+
+  </div>
+  <ng-template class="popup-formSubmit"  #loadingBlock>
+    <p class="popup-formSubmit__error">
+      Произошла ошибка. Форма не отправлена
+    </p>
+  </ng-template>
+</div>
+
+<div class="popup-email">
+  <p class="popup-email__text">
+    <span class="popup-email__lable">email:</span>
+    {{formPostData.email}}
+  </p>
+</div>
+
+<div class="popup-comment">
+  <p class="popup-comment__text">
+    <span class="popup-comment__lable">Комментарий: </span>
+    {{formPostData.textAreaComment}}
+  </p>
+</div>
+
+
+

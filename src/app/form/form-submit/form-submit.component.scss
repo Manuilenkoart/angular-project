@@ -1,0 +1,22 @@
+.popup-formSubmit {
+text-align: center;
+
+  &__success{
+    background-color: #ccff90;
+  }
+  &__error{
+    background-color: #ef5350;
+  }
+}
+.popup-email{
+
+  &__lable{
+    font-weight: 500;
+  }
+ }
+.popup-comment{
+
+  &__lable{
+    font-weight: 500 ;
+  }
+}
