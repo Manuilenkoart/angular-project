@@ -6,6 +6,7 @@ import {CommonModule} from '@angular/common';
 import {WorkExampleComponent} from '../work-example/work-example.component';
 import {AboutYourselfComponent} from '../about-yourself/about-yourself.component';
 import {InterestComponent} from '../interest/interest.component';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import {InterestComponent} from '../interest/interest.component';
     CommonModule,
     MatDialogModule,
     MatButtonModule,
-
+    MatListModule
   ]
 })
 export class HelloModule { }

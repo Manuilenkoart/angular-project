@@ -17,11 +17,11 @@ export class ContentComponent implements OnInit {
 
   constructor(private contentService: ContentService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getCurrencyFromApi();
   }
 
-  getCurrencyFromApi() {
+  getCurrencyFromApi(): void {
     this.loading = true;
     this.contentService.getData().subscribe(res => {
       this.dataSource = res;

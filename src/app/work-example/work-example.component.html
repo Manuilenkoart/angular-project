@@ -1,3 +1,27 @@
-<h1 mat-dialog-title>Примеры работ</h1>
+<h1 mat-dialog-title >Примеры работ</h1>
+<div mat-dialog-content>
 
-  <button mat-button mat-dialog-close>Close</button>
+<mat-list role="list">
+  <mat-list-item role="listitem">
+    <a href="https://crudnotes.herokuapp.com/">
+      <span >&#8594;</span>   CRUD заметки (react + express.js + mongoDB)
+    </a>
+  </mat-list-item>
+  <mat-list-item role="listitem">
+    <a href="https://itbeard.herokuapp.com/">
+      <span >&#8594;</span>   Landing page (react + express.js + youtube api + socket.io + nodemailer)
+    </a>
+  </mat-list-item>
+  <mat-list-item role="listitem">
+    <a href="https://telegram.me/parkingfinesbot">
+    <span >&#8594;</span>   Телеграм бот оплаты штрафов за парковку (telegraf.js +
+    express.js + react + google sheets api+concord pay)
+  </a></mat-list-item>
+</mat-list>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Закрыть</button>
+</div>
+
