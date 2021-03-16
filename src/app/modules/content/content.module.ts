@@ -3,7 +3,7 @@ import {ContentComponent} from './content.component';
 import {ContentService} from './content.service';
 import {CommonModule} from '@angular/common';
 import {ContentRoutingModule} from './content-routing.module';
-import {MaterialModule} from '../../shared/material/material.module';
+import {SharedModule} from '../../shared/shared.module';
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import {MaterialModule} from '../../shared/material/material.module';
   imports: [
     CommonModule,
     ContentRoutingModule,
-    MaterialModule
+    SharedModule
   ]
 })
 export class ContentModule { }

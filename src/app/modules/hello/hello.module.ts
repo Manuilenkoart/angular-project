@@ -4,7 +4,7 @@ import {CommonModule} from '@angular/common';
 import {WorkExampleComponent} from './modals/work-example/work-example.component';
 import {AboutYourselfComponent} from './modals/about-yourself/about-yourself.component';
 import {InterestComponent} from './modals/interest/interest.component';
-import {MaterialModule} from '../../shared/material/material.module';
+import {SharedModule} from '../../shared/shared.module';
 
 
 @NgModule({
@@ -14,7 +14,7 @@ import {MaterialModule} from '../../shared/material/material.module';
     InterestComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    SharedModule
   ]
 })
 export class HelloModule { }

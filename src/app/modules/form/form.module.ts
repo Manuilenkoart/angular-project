@@ -5,7 +5,7 @@ import {FormRoutingModule} from './form-routing.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FormSubmitComponent} from './form-submit/form-submit.component';
 import {FormService} from './form.service';
-import {MaterialModule} from '../../shared/material/material.module';
+import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
   declarations: [FormComponent, FormSubmitComponent],
@@ -13,7 +13,7 @@ import {MaterialModule} from '../../shared/material/material.module';
     CommonModule,
     ReactiveFormsModule,
     FormRoutingModule,
-MaterialModule
+    SharedModule
   ],
   providers: [FormService]
 })
