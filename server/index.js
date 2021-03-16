@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use("/", apiRoutes)
 app.use(express.static(path.join(__dirname, "../dist/angular-project")));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(path.join(__dirname, "../dist/angular-project/index.html")));
+  }
+);
 
 const PORT = process.env.PORT;
 
