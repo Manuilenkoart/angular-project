@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 
 // @ts-ignore
-import {version} from '../../../package.json';
+import {version} from '../../../../package.json';
 
 @Component({
   selector: 'app-header',

@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import {WorkExampleComponent} from '../work-example/work-example.component';
-import {AboutYourselfComponent} from '../about-yourself/about-yourself.component';
-import {InterestComponent} from '../interest/interest.component';
+import {WorkExampleComponent} from './modals/work-example/work-example.component';
+import {AboutYourselfComponent} from './modals/about-yourself/about-yourself.component';
+import {InterestComponent} from './modals/interest/interest.component';
 
 @Component({
   selector: 'app-hello',

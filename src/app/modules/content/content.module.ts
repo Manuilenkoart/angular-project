@@ -1,11 +1,9 @@
 import {NgModule} from '@angular/core';
 import {ContentComponent} from './content.component';
 import {ContentService} from './content.service';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTableModule} from '@angular/material/table';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {CommonModule} from '@angular/common';
 import {ContentRoutingModule} from './content-routing.module';
+import {MaterialModule} from '../../shared/material/material.module';
 
 
 @NgModule({
@@ -13,10 +11,8 @@ import {ContentRoutingModule} from './content-routing.module';
   providers: [ContentService],
   imports: [
     CommonModule,
-    MatButtonModule,
-    MatTableModule,
-    MatProgressSpinnerModule,
-    ContentRoutingModule
+    ContentRoutingModule,
+    MaterialModule
   ]
 })
 export class ContentModule { }

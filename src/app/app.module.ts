@@ -7,10 +7,11 @@ import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {WorkExampleComponent} from './work-example/work-example.component';
-import {MaterialModule} from './material/material.module';
-import {HeaderComponent} from './header/header.component';
-import {HelloModule} from './hello/hello.module';
+import {WorkExampleComponent} from './modules/hello/modals/work-example/work-example.component';
+import {MaterialModule} from './shared/material/material.module';
+import {HeaderComponent} from './layout/header/header.component';
+import {HelloModule} from './modules/hello/hello.module';
+import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 
 
 
@@ -19,6 +20,7 @@ import {HelloModule} from './hello/hello.module';
   declarations: [
     AppComponent,
     HeaderComponent,
+    ContentLayoutComponent,
   ],
   entryComponents: [WorkExampleComponent],
   imports: [
