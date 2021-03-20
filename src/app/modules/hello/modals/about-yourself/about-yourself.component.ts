@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-yourself.component.scss']
 })
 export class AboutYourselfComponent implements OnInit {
-
+  lazyLoadExampleCode = `const routes: Routes = [
+{path: '', component: ContentLayoutComponent,
+children:[
+  {path: '', component: HelloComponent},
+  {path: 'content',  loadChildren: () => import('./modules/content/content.module').then(m => m.ContentModule)},
+  {path: 'feedback',  loadChildren: () => import('./modules/form/form.module').then(m => m.FormModule)},
+    ]},
+{path: '**', redirectTo: '/'}
+];`;
   constructor() { }
 
   ngOnInit(): void {

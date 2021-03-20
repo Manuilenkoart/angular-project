@@ -1,0 +1,32 @@
+.container{
+  display: block;
+  margin: 0 -24px;
+  padding: 0 24px;
+  max-height: 65vh;
+  overflow: auto;
+}
+.wrapperBlock{
+  text-align: center;
+  img, video {
+    width: 100%;
+  }
+
+}
+
+.code-example{
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapperBlock{
+    text-align: center;
+    img, video {
+      width: 50%;
+    }
+
+  }
+
+}
+@media screen and (min-width: 1024px) {
+
+}

@@ -1,6 +1,56 @@
-<div class="container">
-  <button  mat-raised-button  (click)="openDialogWorkExample()" >Примеры работ</button>
-  <button  mat-raised-button  (click)="openDialogAboutYourself()" >Рассказ о себе</button>
-  <button  mat-raised-button  (click)="openDialogInterest()" >Интересы/увлечения</button>
+  <ul class="container-block">
+    <li class="container">
+      <figure >
+        <div class="container-img">
 
-</div>
+          <video controls >
+            <source src="./assets/video/1.mp4" type="video/mp4"><!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
+          </video>
+        </div>
+
+        <figcaption class="container-textblock">
+          <h2 class="container-textblock__title">
+            Как senior .Net хвалил
+          </h2>
+          <p class="container-textblock-text">
+            Подписывайтесь на Itbeard, ставьте лайки, колокольчик
+          </p>
+        </figcaption>
+      </figure>
+      <button  mat-raised-button  (click)="openDialogWorkExample()" >Пример работы</button>
+    </li>
+    <li class="container">
+      <figure>
+        <div class="container-img">
+          <img src="https://miro.medium.com/max/1024/1*EYEnR6eWRYyZ_BmIX5edkw.png" alt="angular man">
+        </div>
+        <figcaption class="container-textblock">
+          <h2 class="container-textblock__title">
+            title
+          </h2>
+          <p class="container-textblock-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </figcaption>
+      </figure>
+      <button  mat-raised-button  (click)="openDialogAboutYourself()" >Рассказ о себе</button>
+    </li>
+    <li class="container">
+      <figure>
+        <div class="container-img">
+          <img src="assets/img/sup.jpg" alt="sup board">
+        </div>
+        <figcaption class="container-textblock">
+          <h2 class="container-textblock__title">
+            Sup board
+          </h2>
+          <p class="container-textblock-text">
+            Здорово жить вблизи огромной реки
+          </p>
+        </figcaption>
+      </figure>
+      <button  mat-raised-button  (click)="openDialogInterest()" >Увлечения</button>
+    </li>
+  </ul>
+
+

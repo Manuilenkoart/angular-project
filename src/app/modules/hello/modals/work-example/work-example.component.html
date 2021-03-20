@@ -1,31 +1,31 @@
-<h1 mat-dialog-title >Примеры работ</h1>
-<div mat-dialog-content>
+<article class="container">
+  <h1 >Если поменялся адресс, то перенапрвьте пользователя автоматом</h1>
+<p>Как то вечером Артур смотрел интервью маститых синьеров которые рассказывали как живется в их дивном мире технологий и внезапно появляется пост Лекса, он же Itbeard, что хотел бы лендос, мол присылайте свои работы, посмотрим всё добро на стриме, обсудим. Артур подумал и решил почему бы нет, 2 недели времени предостаточно. Через 10 дней было всё готово и задеплоино на githubpages. Поскольку оставалось время добавилась фича в виде динамической подгрузки подписчиков, просмотров и колличества видео, а затем возможность получать отзывы на почту, то проект оброс сервером и переехал на heroku. О чем отправлено дополнительное письмо Лексу мол адрес сменился. Настал день X, стрим, доходит очередь к моему проекту, а ссылка старая: page not found 404</p>
+ <div class="wrapperBlock">
+   <img src="https://cdn.dribbble.com/users/2272148/screenshots/6633933/daily008.gif" alt="travolta cant find page">
+ </div>
+<p>Немного паники и активной борьбы с настройкой чата который удалял url адресс, спустя 5 минут всё открылось. Мораль сей басьни такова: если поменялся адресс, то перенапрвьте пользователя автоматом, не нужно надеяться, что он помнит об изменении :)
+  <br>
+P.S. ->
+</p>
 
-<mat-nav-list >
+ <div class="wrapperBlock">
+   <video controls >
+     <source src="./assets/video/4.mp4" type="video/mp4"><!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
+   </video>
+ </div>
+
   <ul>
     <li mat-list-item>
-        <a href="https://crudnotes.herokuapp.com/">
-          <span >&#8594;</span>   CRUD заметки (react + express.js + mongoDB)
-        </a>
-    </li>
-    <li mat-list-item>
         <a href="https://itbeard.herokuapp.com/">
-          <span >&#8594;</span>   Landing page (react + express.js + youtube api + socket.io + nodemailer)
-        </a>
-
-    </li>
-    <li mat-list-item>
-       <a href="https://telegram.me/parkingfinesbot">
-          <span >&#8594;</span>   Телеграм бот оплаты штрафов за парковку (telegraf.js +
-          express.js + react + google sheets api+concord pay)
+          <span >&#8594;</span>   Посмотреть лендосинку
         </a>
     </li>
   </ul>
-</mat-nav-list>
 
-</div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Закрыть</button>
+  </div>
 
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Закрыть</button>
-</div>
+</article>
 

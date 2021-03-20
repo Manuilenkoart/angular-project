@@ -1,12 +1,63 @@
-<h1 mat-dialog-title>Интересы</h1>
 <mat-dialog-content>
-  <p >Последняя тема которая заинтересова это создания продуктов. На фоне этого ознакомился с книгой "Running Lean" Ash Maurya в которой автор описывается подход бережливого создания продуктов. Ash рассказывает как шаг за шагом проходить путь от гипотезы до продукта.
-    Воодушевленный переключился на книгу Lean startup  Эрика Риса, который рассказывает о своем пути построения компании: о взлетах и падениях и как методы бережливого производства повлияли на него. Lean похоже на здравый смысм, но оказывается не так просто понять в какую сторону бежать
-  </p>
-  <h1 mat-dialog-title>Увлечения</h1>
-  <p >Если говорить об увлечениях, то это бесспорно катание на досках: зимой и летом, по снегу, воде, асфальту. Сап доска или лонгборд это всегда весело :)</p>
+  <article class="container">
+  <h1 >Лучший маршрут выходного дня</h1>
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EEp6Eq7XPFt3Bfyh2AQgv1-D1c0aqcWF"></iframe>
+    <p class="container-text">Протяженность около 10 км, что займет около 3 часов. На своем пути можно встретить точки отмеченные на карте, изображение которых ниже</p>
+
+    <mat-tab-group dynamicHeight>
+    <mat-tab label="Место стоянки баржи">
+      <div class="example-large-box mat-elevation-z4">
+       <div class="content">
+         <img src="./assets/img/14.jpg">
+       </div>
+
+      </div>
+    </mat-tab>
+    <mat-tab label="Полузатопленный катер">
+      <div class="example-large-box mat-elevation-z4">
+        <div class="content">
+          <img src="./assets/img/11.jpg">
+
+        </div>
+
+      </div>
+    </mat-tab>
+    <mat-tab label="Поплавок">
+      <div class="example-large-box mat-elevation-z4">
+        <div class="content">
+          <img src="./assets/img/12.jpg">
+
+        </div>
+
+      </div>
+    </mat-tab>
+    <mat-tab label="Недостроенный отель 'Парус'">
+      <div class="example-large-box mat-elevation-z4">
+        <div class="content">
+          <img src="./assets/img/13.jpg">
+
+        </div>
+
+      </div>
+    </mat-tab>
+    <mat-tab label="Водопад 'Порог ревущий'">
+      <div class="example-large-box mat-elevation-z4">
+        <div class="content">
+          <img src="./assets/img/15.jpg">
+
+        </div>
+
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
+
+
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Закрыть</button>
+  </div>
+
+</article>
 
 </mat-dialog-content>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Закрыть</button>
-</div>
+
