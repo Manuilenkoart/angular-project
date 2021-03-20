@@ -1,12 +1,7 @@
 .popup-formSubmit {
-text-align: center;
+min-width: 200px;
 
-  &__success{
-    background-color: #ccff90;
-  }
-  &__error{
-    background-color: #ef5350;
-  }
+
 }
 .popup-email{
 
