@@ -10,6 +10,7 @@ import {version} from '../../../../package.json';
 })
 export class HeaderComponent  {
 @Input() version: string = version;
+heightToogle = false;
 
   constructor() { }
 

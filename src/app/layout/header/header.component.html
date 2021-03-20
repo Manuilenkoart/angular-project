@@ -1,19 +1,53 @@
-<mat-card>
-  <nav class="nav-container">
-    <ul class="nav-list">
+<div class="tablet-pc-header">
+  <mat-card>
+    <nav class="nav-container">
+      <ul class="nav-list">
 
-      <li class="nav-list__item "  >
-        <a mat-stroked-button  [routerLinkActiveOptions]="{exact:true}" routerLinkActive="nav-list__active" [routerLink]="['/']" >Приветствие</a>
-      </li>
-      <li class="nav-list__item " >
-        <a mat-stroked-button routerLinkActive="nav-list__active" [routerLink]="['/content']">Контент</a>
-      </li>
-      <li class="nav-list__item ">
-        <a mat-stroked-button routerLinkActive="nav-list__active" [routerLink]="['/feedback']">Обратная связь</a>
-      </li>
+        <li class="nav-list__item "  >
+          <a mat-stroked-button  [routerLinkActiveOptions]="{exact:true}" routerLinkActive="nav-list__active" [routerLink]="['/']" >Приветствие</a>
+        </li>
+        <li class="nav-list__item " >
+          <a mat-stroked-button routerLinkActive="nav-list__active" [routerLink]="['/content']">Контент</a>
+        </li>
+        <li class="nav-list__item ">
+          <a mat-stroked-button routerLinkActive="nav-list__active" [routerLink]="['/feedback']">Обратная связь</a>
+        </li>
 
-    </ul>
-    <p class="nav-projectVersion">версия {{version}}</p>
-  </nav>
-</mat-card>
+      </ul>
+      <p class="nav-projectVersion">версия {{version}}</p>
+    </nav>
+  </mat-card>
+</div>
 
+<div class="mobile-header">
+
+<mat-drawer-container [ngStyle]="{
+ height: heightToogle ? '140px' : '70px'
+}" class="example-container" hasBackdrop="false">
+  <mat-drawer [ngStyle]="{
+ width: heightToogle ? '60vw' : 'auto'
+}" #drawer mode="side">
+      <nav class="nav-container">
+        <ul mat-list class="nav-list">
+
+          <li class="nav-list__item "  >
+            <a mat-list-item  [routerLinkActiveOptions]="{exact:true}" routerLinkActive="nav-list__active" [routerLink]="['/']" >Приветствие</a>
+          </li>
+          <li class="nav-list__item " >
+            <a mat-list-item routerLinkActive="nav-list__active" [routerLink]="['/content']">Контент</a>
+          </li>
+          <li class="nav-list__item ">
+            <a mat-list-item routerLinkActive="nav-list__active" [routerLink]="['/feedback']">Обратная связь</a>
+          </li>
+
+        </ul>
+        <p class="nav-projectVersion">версия {{version}}</p>
+      </nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <button mat-raised-button (click)="heightToogle = !heightToogle" (click)="drawer.toggle()">
+      <mat-icon>reorder</mat-icon>
+    </button>
+  </mat-drawer-content>
+</mat-drawer-container>
+</div>

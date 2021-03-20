@@ -8,6 +8,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
 
 const Material = [
   MatButtonModule,
@@ -21,6 +23,8 @@ const Material = [
   MatCardModule,
   MatTabsModule,
   MatSnackBarModule,
+  MatSidenavModule,
+  MatIconModule
 ];
 
 @NgModule({
