@@ -6,7 +6,7 @@ h1{
 }
 
 table {
-  width: 70vw;
+  width: 95vw;
   margin: 0 auto;
 }
 
@@ -56,4 +56,15 @@ tr.example-element-row:not(.example-expanded-row):active {
 
 
 
+@media screen and (min-width: 768px) {
+  table {
+    width: 80vw;
+  }
 
+}
+@media screen and (min-width: 1024px) {
+  table {
+    width: 70vw;
+  }
+
+}
