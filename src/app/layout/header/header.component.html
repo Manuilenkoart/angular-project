@@ -4,17 +4,20 @@
       <ul class="nav-list">
 
         <li class="nav-list__item "  >
-          <a mat-stroked-button  [routerLinkActiveOptions]="{exact:true}" routerLinkActive="nav-list__active" [routerLink]="['/']" >Приветствие</a>
+          <a mat-flat-button  [routerLinkActiveOptions]="{exact:true}" routerLinkActive="nav-list__active" [routerLink]="['/hello']" >Приветствие</a>
         </li>
         <li class="nav-list__item " >
-          <a mat-stroked-button routerLinkActive="nav-list__active" [routerLink]="['/content']">Контент</a>
+          <a mat-flat-button routerLinkActive="nav-list__active" [routerLink]="['/content']">Контент</a>
         </li>
         <li class="nav-list__item ">
-          <a mat-stroked-button routerLinkActive="nav-list__active" [routerLink]="['/feedback']">Обратная связь</a>
+          <a mat-flat-button routerLinkActive="nav-list__active" [routerLink]="['/feedback']">Обратная связь</a>
         </li>
 
       </ul>
-      <p class="nav-projectVersion">версия {{version}}</p>
+      <div class="aside">
+        <button  mat-flat-button (click)="logout($event)">Выйти</button>
+        <p class="nav-projectVersion" >версия {{version}}</p>
+      </div>
     </nav>
   </mat-card>
 </div>
@@ -22,7 +25,7 @@
 <div class="mobile-header">
 
 <mat-drawer-container [ngStyle]="{
- height: heightToogle ? '140px' : '70px'
+ height: heightToogle ? '195px' : '70px'
 }" class="example-container" hasBackdrop="false">
   <mat-drawer [ngStyle]="{
  width: heightToogle ? '60vw' : 'auto'
@@ -31,17 +34,19 @@
         <ul mat-list class="nav-list">
 
           <li class="nav-list__item "  >
-            <a mat-list-item  [routerLinkActiveOptions]="{exact:true}" routerLinkActive="nav-list__active" [routerLink]="['/']" >Приветствие</a>
+            <a mat-raised-button [routerLinkActiveOptions]="{exact:true}" routerLinkActive="nav-list__active" [routerLink]="['/hello']" >Приветствие</a>
           </li>
           <li class="nav-list__item " >
-            <a mat-list-item routerLinkActive="nav-list__active" [routerLink]="['/content']">Контент</a>
+            <a mat-raised-button routerLinkActive="nav-list__active" [routerLink]="['/content']">Контент</a>
           </li>
           <li class="nav-list__item ">
-            <a mat-list-item routerLinkActive="nav-list__active" [routerLink]="['/feedback']">Обратная связь</a>
+            <a mat-raised-button routerLinkActive="nav-list__active" [routerLink]="['/feedback']">Обратная связь</a>
           </li>
-
+          <li class="nav-list__item ">
+            <button  mat-raised-button (click)="logout($event)">Выйти</button>
+          </li>
         </ul>
-        <p class="nav-projectVersion">версия {{version}}</p>
+        <p class="nav-projectVersion" >версия {{version}}</p>
       </nav>
   </mat-drawer>
   <mat-drawer-content>

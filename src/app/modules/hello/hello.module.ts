@@ -5,6 +5,7 @@ import {WorkExampleComponent} from './modals/work-example/work-example.component
 import {AboutYourselfComponent} from './modals/about-yourself/about-yourself.component';
 import {InterestComponent} from './modals/interest/interest.component';
 import {SharedModule} from '../../shared/shared.module';
+import {HelloRoutingModule} from './hello-routing.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {SharedModule} from '../../shared/shared.module';
     InterestComponent],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    HelloRoutingModule
   ]
 })
 export class HelloModule { }
