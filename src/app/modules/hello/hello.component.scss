@@ -22,13 +22,11 @@ position: relative;
 p{
   margin: 40px 0 20px 0 ;
 }
+img {
+  width: 100%;
+  opacity: 0.05;
 
-
-    img {
-
-width: 100%;
-      opacity: 0.05;
-  }
+    }
 
 }
 
@@ -37,7 +35,7 @@ width: 100%;
 }
 .title-container {
   position: absolute;
-  //min-width: 250px;
+  z-index: 1;
 }
 @keyframes move {
   from {
@@ -76,6 +74,7 @@ width: 100%;
           color: #0A6AA6;
           font-size: 14px;
     font-weight: bold;
+          z-index: 1;
         }
   }
 

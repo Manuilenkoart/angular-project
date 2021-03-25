@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ViewChild} from '@angular/core';
 
 // @ts-ignore
 import {version} from '../../../../package.json';
@@ -12,12 +12,22 @@ import {AuthService} from '../../core/service/auth.service';
 })
 export class HeaderComponent  {
 @Input() version: string = version;
-heightToogle = false;
+@ViewChild('menu__toggle') private checkInput;
+
 
   constructor(private router: Router,
               private auth: AuthService) {
 }
+  toogleCheckboxValue(): void{
+  this.checkInput.nativeElement.checked = !this.checkInput.nativeElement.checked;
+  }
 
+
+  handleClickNavLink(event): void{
+    if (event.target !== event.currentTarget){
+      this.toogleCheckboxValue();
+}
+  }
 logout(event: Event): void{
     event.preventDefault();
     this.auth.logout();

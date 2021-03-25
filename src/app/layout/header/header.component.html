@@ -25,12 +25,12 @@
 
 
 <div class="hamburger-menu">
-  <input id="menu__toggle" type="checkbox" />
+  <input #menu__toggle id="menu__toggle" type="checkbox"  />
   <label class="menu__btn" for="menu__toggle">
-    <span></span>
+    <span class="menu__btn__span"></span>
   </label>
 
-  <ul class="menu__box">
+  <ul class="menu__box" (click)="handleClickNavLink($event)">
     <li >
       <a class="menu__item"  [routerLinkActiveOptions]="{exact:true}" routerLinkActive="nav-list__active" [routerLink]="['/hello']" >Приветствие</a>
     </li>
