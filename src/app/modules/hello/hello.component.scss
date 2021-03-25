@@ -1,42 +1,48 @@
-.mainScreen-container{
+.mainScreen-container {
 
-position: relative;
-  h3{
-  font-size: 30px;
-  margin-bottom: 40px;
+  position: relative;
 
-}
-  h2{
+  h3 {
+    font-size: 30px;
+    margin-bottom: 40px;
+
+  }
+
+  h2 {
     font-size: 40px;
     color: #80d1f2;
   }
-  a{
+
+  a {
     padding: 10px 20px;
     cursor: pointer;
     background-color: #f3ba25;
     border-radius: 4px;
     border: none;
     line-height: 36px;
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, .87);
   }
-p{
-  margin: 40px 0 20px 0 ;
-}
-img {
-  width: 100%;
-  opacity: 0.05;
 
-    }
+  p {
+    margin: 40px 0 20px 0;
+  }
+
+  img {
+    width: 100%;
+    opacity: 0.05;
+  }
 
 }
 
 .typing {
   border-bottom: 3px dashed #1a8cbf;
 }
+
 .title-container {
   position: absolute;
   z-index: 1;
 }
+
 @keyframes move {
   from {
     right: -10%;
@@ -52,30 +58,34 @@ img {
   overflow: hidden;
   align-items: center;
   padding: 10px;
- margin: 40px 0;
+  margin: 40px 0;
   border-radius: 5px;
   box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
-&-news {
-  z-index: 2;
-  padding: 10px;
+
+  &-news {
+    z-index: 2;
+    padding: 10px;
     margin: 10px;
     background-color: #f43636e8;
     border-radius: 50%;
-}
+  }
+
   &-textBlock {
     display: flex;
     flex-wrap: wrap;
     z-index: 2;
+
     p {
       margin-bottom: 0;
     }
-        a {
 
-          color: #0A6AA6;
-          font-size: 14px;
-    font-weight: bold;
-          z-index: 1;
-        }
+    a {
+
+      color: #0A6AA6;
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 1;
+    }
   }
 
   img {
@@ -93,27 +103,29 @@ img {
 .container-block {
   display: flex;
   flex-wrap: wrap;
-button{
-  margin-left: 5px;
-}
+
+  button {
+    margin-left: 5px;
+  }
 }
 
-.container{
+.container {
   margin-bottom: 20px;
   padding-bottom: 15px;
   border-radius: 5px;
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 
 
-  &-img{
+  &-img {
     min-width: 310px;
-   height:330px;
+    height: 330px;
 
-    video{
+    video {
       object-fit: contain;
       width: 100%;
       height: 100%;
     }
+
     img {
       object-fit: cover;
       width: 100%;
@@ -122,12 +134,13 @@ button{
     }
   }
 
-  &-textblock{
-padding: 0 5px;
+  &-textblock {
+    padding: 0 5px;
   }
 }
+
 @media screen and (min-width: 768px) {
-  .mainScreen-container{
+  .mainScreen-container {
     display: flex;
     justify-content: space-between;
 
@@ -139,7 +152,7 @@ padding: 0 5px;
   .title-container {
     position: static;
   }
-  .container-block{
+  .container-block {
     justify-content: space-between;
   }
   .container {
@@ -153,6 +166,7 @@ padding: 0 5px;
   }
 
 }
+
 @media screen and (min-width: 1024px) {
   .container {
     width: 300px;

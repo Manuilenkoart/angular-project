@@ -11,18 +11,21 @@ import {InterestComponent} from './modals/interest/interest.component';
 })
 
 
-export class HelloComponent   {
-  constructor(public dialog: MatDialog) {}
+export class HelloComponent {
+  constructor(public dialog: MatDialog) {
+  }
+
   openDialogWorkExample(): void {
     this.dialog.open(WorkExampleComponent);
   }
+
   openDialogAboutYourself(): void {
     this.dialog.open(AboutYourselfComponent);
   }
-openDialogInterest(): void {
-    this.dialog.open(InterestComponent);
-}
 
+  openDialogInterest(): void {
+    this.dialog.open(InterestComponent);
+  }
 
 
 }
