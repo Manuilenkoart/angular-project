@@ -23,6 +23,8 @@ openDialogInterest(): void {
     this.dialog.open(InterestComponent);
 }
 
+
+
 }
 
 

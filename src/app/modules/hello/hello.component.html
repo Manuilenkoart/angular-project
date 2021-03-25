@@ -1,4 +1,39 @@
-  <ul class="container-block">
+
+
+<div class="mainScreen-container">
+
+  <div class="title-container">
+    <h3>Добро пожаловать на страницу!</h3>
+
+    <ngx-typed-js [strings]="['Веселись ', 'Развлекайся ', 'Ликуй ', 'Радуйся ',]" [loop]="true" [smartBackspace]="true" [typeSpeed]="100">
+      <h2 class="typing"></h2>
+    </ngx-typed-js>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt dolorem esse fugiat laboriosam nam numquam quo saepe unde voluptatum.</p>
+    <a [routerLink]="['/feedback']">Написать отзыв</a>
+
+  </div>
+
+    <img src="./assets/img/x400.jpg" alt="main image">
+
+
+
+
+ </div>
+
+<div class="rate ">
+  <img src="https://i.pinimg.com/originals/ae/f5/0a/aef50a29f12e06db36021a71a8d7b6cc.gif" alt="running horse">
+  <div class="rate-news">
+    <strong>news</strong>
+
+  </div>
+  <div class="rate-textBlock">
+    <p>  Псссс... Биток снова на коне.  </p>
+    <a [routerLink]="['/content']">Посмотреть курс</a>
+
+  </div>
+
+</div>
+<ul class="container-block">
     <li class="container">
       <figure>
         <div class="container-img">

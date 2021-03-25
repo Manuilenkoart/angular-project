@@ -35,7 +35,7 @@
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 4;
   >span {
     display: block;
     position: absolute;
@@ -81,10 +81,10 @@
   list-style: none;
 
   background-color: #ECEFF1;
-  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
 
   transition-duration: .25s;
-  z-index: 1;
+  z-index: 3;
 }
 
 .menu__item {

@@ -1,3 +1,96 @@
+.mainScreen-container{
+
+position: relative;
+  h3{
+  font-size: 30px;
+  margin-bottom: 40px;
+
+}
+  h2{
+    font-size: 40px;
+    color: #80d1f2;
+  }
+  a{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f3ba25;
+    border-radius: 4px;
+    border: none;
+    line-height: 36px;
+    color: rgba(0,0,0,.87);
+  }
+p{
+  margin: 40px 0 20px 0 ;
+}
+
+
+    img {
+
+width: 100%;
+      opacity: 0.05;
+  }
+
+}
+
+.typing {
+  border-bottom: 3px dashed #1a8cbf;
+}
+.title-container {
+  position: absolute;
+  //min-width: 250px;
+}
+@keyframes move {
+  from {
+    right: -10%;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+.rate {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  padding: 10px;
+ margin: 40px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+&-news {
+  z-index: 2;
+  padding: 10px;
+    margin: 10px;
+    background-color: #f43636e8;
+    border-radius: 50%;
+}
+  &-textBlock {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    p {
+      margin-bottom: 0;
+    }
+        a {
+
+          color: #0A6AA6;
+          font-size: 14px;
+    font-weight: bold;
+        }
+  }
+
+  img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    height: 100%;
+    animation: move 5s infinite ease-in-out;
+
+  }
+}
+
+
 .container-block {
   display: flex;
   flex-wrap: wrap;
@@ -35,6 +128,18 @@ padding: 0 5px;
   }
 }
 @media screen and (min-width: 768px) {
+  .mainScreen-container{
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      display: block;
+      opacity: 1;
+    }
+  }
+  .title-container {
+    position: static;
+  }
   .container-block{
     justify-content: space-between;
   }
