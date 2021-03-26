@@ -28,7 +28,7 @@
   }
 
   img {
-    width: 100%;
+    max-width:100% ;
     opacity: 0.05;
   }
 
@@ -151,6 +151,7 @@
   }
   .title-container {
     position: static;
+    width: 50vw;
   }
   .container-block {
     justify-content: space-between;
