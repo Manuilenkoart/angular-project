@@ -1,6 +1,8 @@
 .container{
+  display: flex;
+  justify-content: center;
   margin: 20vh auto 0 auto;
-
+position: relative;
   p{
     text-align: center;
     margin-top: 20px;
@@ -8,6 +10,15 @@
   a {
     color: #0A6AA6;
   }
+  img {
+    position: absolute;
+    opacity: 0.05;
+    max-width: 100%;
+  }
+}
+.form-container {
+  z-index: 1;
+
 }
 .form{
   position: relative;
@@ -16,8 +27,8 @@
   flex-direction: column;
 margin: 0 auto;
   h2 {
+    font-size: 30px;
     text-align: center;
-
   }
 &-control {
   display: block;
@@ -58,6 +69,16 @@ margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
+.container {
+  padding: 0 20px;
+  img {
+    position: static;
+    opacity: 1;
+  }
+}
+  .form-container{
+    padding-top: 60px;
+  }
   .form {
     max-width: 60vw;
   }
