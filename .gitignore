@@ -3,6 +3,7 @@
 
 .gitignore
 server/.env
+src/.env
 .env
 # compiled output
 /dist

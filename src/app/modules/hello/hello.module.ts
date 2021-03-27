@@ -6,6 +6,7 @@ import {AboutYourselfComponent} from './modals/about-yourself/about-yourself.com
 import {InterestComponent} from './modals/interest/interest.component';
 import {SharedModule} from '../../shared/shared.module';
 import {HelloRoutingModule} from './hello-routing.module';
+import {NgxTypedJsModule} from 'ngx-typed-js';
 
 
 @NgModule({
@@ -16,7 +17,9 @@ import {HelloRoutingModule} from './hello-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    HelloRoutingModule
+    HelloRoutingModule,
+    NgxTypedJsModule
+
   ]
 })
 export class HelloModule { }
