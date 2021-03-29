@@ -40,6 +40,11 @@
     <li >
       <a class="menu__item" routerLinkActive="nav-list__active" [routerLink]="['/feedback']">Обратная связь</a>
     </li>
-
+    <li >
+      <button class="menu__item menu__item-btn" (click)="logout($event)">Выйти</button>
+    </li>
+    <li >
+      <p class="nav-projectVersion" >версия {{version}}</p>
+    </li>
   </ul>
 </div>

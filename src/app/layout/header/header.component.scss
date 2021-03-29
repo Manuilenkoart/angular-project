@@ -104,13 +104,20 @@
     background-color: #CFD8DC;
 
   }
+  &-btn {
+    width: 100%;
+    text-align: left;
+    border: none;
+  }
 }
 
 
 .tablet-pc-header{
   display:none;
 }
-
+.nav-projectVersion{
+ padding: 24px;
+}
 
 @media screen and (min-width: 768px) {
   .hamburger-menu{
@@ -137,6 +144,9 @@
   .mat-stroked-button{
     background-color: #fffff7;
 
+  }
+  .nav-projectVersion{
+    padding: 0;
   }
 }
 @media screen and (min-width: 1024px) {
